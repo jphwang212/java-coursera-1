@@ -29,6 +29,20 @@ public class Part3 {
         String gene = dna.substring(startIndex, smallest + 3);
         return gene;
     }
+    public int countGenes(String dna){
+        return 0;
+    }
+    public void testCountGenes(){
+        String dna1 = "";
+        String dna2 = "";
+        String dna3 = "";
+        int test1 = countGenes(dna1);
+        int test2 = countGenes(dna2);
+        int test3 = countGenes(dna3);
+        System.out.println("Test 1 = " + test1);
+        System.out.println("Test 1 = " + test2);
+        System.out.println("Test 1 = " + test3);
+    }
     public void testFindGene(){
         String dna1 = "TAATAGTGA";          // test 1: No ATG
         String dna2 = "ATGTTATGGAAT";       // test 2: No stop codon
@@ -42,6 +56,7 @@ public class Part3 {
         System.out.println("Dna 5: " + findGene(dna5));
     }
     public static void main(String[] args){
-
+        Part3 p3 = new Part3();
+        p3.testCountGenes();
     }
 }

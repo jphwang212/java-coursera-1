@@ -30,18 +30,29 @@ public class Part3 {
         return gene;
     }
     public int countGenes(String dna){
-        return 0;
+        int count = 0;
+        for(int i = 0; i < dna.length() - 3; i++){
+            String startCodon = dna.substring(i, i + 3);
+            if(startCodon.equals("ATG")){
+                String codon = findGene(dna.substring(i));
+                if(codon.length() > 0){
+                    count++;
+                }
+                i += 2;
+            }
+        }
+        return count;
     }
     public void testCountGenes(){
-        String dna1 = "";
-        String dna2 = "";
-        String dna3 = "";
+        String dna1 = "ATGTAAAGTTGGTAA";
+        String dna2 = "ATGAATTGAATGTAG";
+        String dna3 = "ATG";
         int test1 = countGenes(dna1);
         int test2 = countGenes(dna2);
         int test3 = countGenes(dna3);
         System.out.println("Test 1 = " + test1);
-        System.out.println("Test 1 = " + test2);
-        System.out.println("Test 1 = " + test3);
+        System.out.println("Test 2 = " + test2);
+        System.out.println("Test 3 = " + test3);
     }
     public void testFindGene(){
         String dna1 = "TAATAGTGA";          // test 1: No ATG

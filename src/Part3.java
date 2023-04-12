@@ -54,6 +54,7 @@ public class Part3 {
         System.out.println("Test 2 = " + test2);
         System.out.println("Test 3 = " + test3);
     }
+
     public void testFindGene(){
         String dna1 = "TAATAGTGA";          // test 1: No ATG
         String dna2 = "ATGTTATGGAAT";       // test 2: No stop codon

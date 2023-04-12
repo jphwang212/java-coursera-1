@@ -61,6 +61,11 @@ public class Part1 {
         System.out.println("Dna 4: " + findGene(dna4));
         System.out.println("Dna 5: " + findGene(dna5));
     }
+    public void printAllGenes(String dna){
+        while(true){
+
+        }
+    }
     public static void main(String[] args){
         Part1 instance1 = new Part1();
         instance1.testFindStopCodon();

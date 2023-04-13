@@ -47,7 +47,7 @@ public class ParseCSV {
         ParseCSV test = new ParseCSV();
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
-        String countryInfo = test.countryInfo(parser, "Germany");
+        String countryInfo = test.countryInfo(parser, "Nauru");
         System.out.println("Info: " + countryInfo);
         parser = fr.getCSVParser();
         test.listExportersTwoProducts(parser, "gold", "diamonds");
@@ -55,6 +55,6 @@ public class ParseCSV {
         int num = test.numberOfExporters(parser, "gold");
         System.out.println("Number of exporters = " + num);
         parser = fr.getCSVParser();
-        test.bigExporters(parser, "$400,000,000");
+        test.bigExporters(parser, "$999,999,999,999d");
     }
 }

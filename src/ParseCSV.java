@@ -47,12 +47,12 @@ public class ParseCSV {
         ParseCSV test = new ParseCSV();
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
-        String countryInfo = test.countryInfo(parser, "Nauru");
-        System.out.println("Info: " + countryInfo);
+//        String countryInfo = test.countryInfo(parser, "Nauru");
+//        System.out.println("Info: " + countryInfo);
+//        parser = fr.getCSVParser();
+        test.listExportersTwoProducts(parser, "cotton", "flowers");
         parser = fr.getCSVParser();
-        test.listExportersTwoProducts(parser, "gold", "diamonds");
-        parser = fr.getCSVParser();
-        int num = test.numberOfExporters(parser, "gold");
+        int num = test.numberOfExporters(parser, "cocoa");
         System.out.println("Number of exporters = " + num);
         parser = fr.getCSVParser();
         test.bigExporters(parser, "$999,999,999,999d");

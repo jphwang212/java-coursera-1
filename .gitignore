@@ -30,3 +30,6 @@ bin/
 
 ### Weather data
 nc_weather/
+
+### Names data
+testing/

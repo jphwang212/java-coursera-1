@@ -103,7 +103,7 @@ public class ParseWeather {
     public void testFileWithColdestTemp(){
         String file = fileWithColdestTemperature();
         System.out.println("Coldest day was in file " + file);
-        FileResource fr = new FileResource("nc_weather/2014/" + file);
+        FileResource fr = new FileResource( System.getProperty("user.dir") + "/nc_weather/2013/" + file);
         CSVParser parser = fr.getCSVParser();
         CSVRecord record = coldestHourInFile(parser);
         parser = fr.getCSVParser();
@@ -137,9 +137,9 @@ public class ParseWeather {
     public static void main(String[] args){
         ParseWeather inst = new ParseWeather();
 //        inst.testColdestHourInFile();
-//        inst.testFileWithColdestTemp();
+        inst.testFileWithColdestTemp();
 //        inst.testLowestHumidityInFile();
 //        inst.testLowestHumidityInManyFiles();
-        inst.testAverageTemperatureWithHighHumidityInFile();
+//        inst.testAverageTemperatureWithHighHumidityInFile();
     }
 }
